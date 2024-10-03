@@ -94,7 +94,7 @@ form {
     gap: 8px;
 }
 
-.item-lista-container{
+.lista-item-container{
     display: flex;
     align-items: center ;
     justify-content: space-between;
@@ -146,7 +146,9 @@ ul{
     transform: rotate(-140deg);
 }
 
-.botao-acao{
+.item-lista-button{
     background: transparent;
     border: none;
 }
+
+ 
