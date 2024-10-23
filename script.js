@@ -5,7 +5,7 @@ let contador = 0;
 BotaoSalvarItem.addEventListener("click", adicionarItem);
 
 function adicionarItem(evento) {
-    evento.preventDefault()
+    evento.preventDefault()    
 
     const itemDaLista = document.createElement("li");
     const containerItemLista = document.createElement("div");
@@ -23,6 +23,17 @@ function adicionarItem(evento) {
 
     const checkboxLabel = document.createElement("label");
     checkboxLabel.setAttribute("for", chackboxInput.id);
+
+    checkboxLabel.addEventListener("click", function (evento) {
+        const checkboxInput = evento.currentTarget.querySelector(".chackbox-input");
+        const checkboxCustomizado = evento.currentTarget.querySelector(".chackbox-costumizado");
+
+        if (checkboxInput.checked) {
+            checkboxCustomizado.classList.add("chacked");
+        } else {
+            checkboxCustomizado.classList.remove("chacked");
+        }
+    })   
 
     const checkboxCustomizado = document.createElement("div");
     checkboxCustomizado.classList.add("chackbox-costumizado");
