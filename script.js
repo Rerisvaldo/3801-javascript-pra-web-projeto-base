@@ -13,6 +13,7 @@ function adicionarItem(evento) {
     containerItemLista.classList.add("lista-item-container");
 
     const containerNomeDoitem = document.createElement("div");
+    containerNomeDoitem.classList.add("lista-itens");
 
     const containerChackbox = document.createElement("div");
     containerChackbox.classList.add("chackbox-container");
@@ -78,7 +79,7 @@ function adicionarItem(evento) {
     containerBotoes.appendChild(botaoEditar)
 
     containerItemLista.appendChild(containerNomeDoitem);
-    containerItemLista.appendChild(nomeDoItem);
+    containerNomeDoitem.appendChild(nomeDoItem);
     containerItemLista.appendChild(containerBotoes)
 
     const itemData = document.createElement("p");
