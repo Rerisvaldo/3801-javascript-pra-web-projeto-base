@@ -8,7 +8,7 @@ const listaDeCompras = document.getElementById("lista-de-compras");
 
 export function adicionarItem(evento) {
     evento.preventDefault()
-    const itemDaLista = criarItemDalista(item.value);
+    const itemDaLista = criarItemDalista(item.value, listaDeCompras);
     listaDeCompras.appendChild(itemDaLista);
     verificarListaVazia(listaDeCompras)
 }

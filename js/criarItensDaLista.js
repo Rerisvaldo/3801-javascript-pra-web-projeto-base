@@ -1,8 +1,9 @@
+import { adionarData } from "./adionarData.js";
 const listaComprado = document.getElementById("lista-comprado");
 let contador = 0;
 
 
-export function criarItemDalista(item) {
+export function criarItemDalista(item, listaDeCompras) {
     const itemDaLista = document.createElement("li");
     const containerItemLista = document.createElement("div");
     containerItemLista.classList.add("lista-item-container");
@@ -35,6 +36,7 @@ export function criarItemDalista(item) {
             checkboxCustomizado.classList.remove("chacked");
             itemTitulo.style.textDecoration = "none";
             listaDeCompras.appendChild(itemDaLista);
+            
         }
     })
 
@@ -78,9 +80,7 @@ export function criarItemDalista(item) {
     containerItemLista.appendChild(containerBotoes)
 
     const itemData = document.createElement("p");
-    itemData.innerHTML = ` ${new Date().toLocaleDateString("pt-BR", { weekday: "long" })}  
-    (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString("pt-BR", { hour: "numeric", minute: "numeric" })}`;
-    itemData.classList.add("texto-data");
+    adionarData(itemData);
 
     itemDaLista.appendChild(containerItemLista);
     itemDaLista.appendChild(itemData);

@@ -6,4 +6,4 @@ export function verificarListaVazia(lista) {
     } else {
         mensagemListavazia.style.display = "none";
     }
-}
+}   
