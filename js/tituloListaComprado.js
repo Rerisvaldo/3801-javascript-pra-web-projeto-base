@@ -1,1 +1,0 @@
-const tituloListaComprado = document.getElementById("container-titulo-lista-compprado") 

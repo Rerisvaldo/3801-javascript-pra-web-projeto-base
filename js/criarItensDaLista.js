@@ -1,4 +1,5 @@
 import { adionarData } from "./adionarData.js";
+import { ocultarTituloListaComprado } from "./OcultarTituloListaComprado.js";
 const listaComprado = document.getElementById("lista-comprado");
 let contador = 0;
 
@@ -31,7 +32,8 @@ export function criarItemDalista(item, listaDeCompras) {
             checkboxCustomizado.classList.add("chacked");
             itemTitulo.style.textDecoration = "line-through";
             listaComprado.appendChild(itemDaLista);
-
+            ocultarTituloListaComprado(listaComprado);
+            
         } else {
             checkboxCustomizado.classList.remove("chacked");
             itemTitulo.style.textDecoration = "none";
@@ -39,6 +41,7 @@ export function criarItemDalista(item, listaDeCompras) {
             
         }
     })
+   
 
     const checkboxCustomizado = document.createElement("div");
     checkboxCustomizado.classList.add("chackbox-costumizado");
