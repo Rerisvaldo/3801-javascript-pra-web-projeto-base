@@ -33,15 +33,14 @@ export function criarItemDalista(item, listaDeCompras) {
             itemTitulo.style.textDecoration = "line-through";
             listaComprado.appendChild(itemDaLista);
             ocultarTituloListaComprado(listaComprado);
-            
+
         } else {
             checkboxCustomizado.classList.remove("chacked");
             itemTitulo.style.textDecoration = "none";
             listaDeCompras.appendChild(itemDaLista);
-            
         }
     })
-   
+
 
     const checkboxCustomizado = document.createElement("div");
     checkboxCustomizado.classList.add("chackbox-costumizado");
